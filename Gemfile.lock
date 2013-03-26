@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    newrelic_platform (0.0.1)
+      rest
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mime-types (1.21)
+    net-http-persistent (2.8)
+    rest (2.2.0)
+      net-http-persistent
+      rest-client (>= 0.3.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    uber_config (1.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  newrelic_platform!
+  uber_config
