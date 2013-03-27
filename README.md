@@ -59,6 +59,7 @@ Boom. Data.
 
 ## Further Reading
 
-You can use IronWorker by Iron.io to schedule this collector so that it runs every minute. See more here:
-https://github.com/newrelic-platform/ironmq_worker
+You can use IronWorker by Iron.io to easily schedule this collector so that it runs every minute.
+
+See more here: https://github.com/newrelic-platform/ironmq_worker
 
