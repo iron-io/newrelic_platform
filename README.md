@@ -5,17 +5,15 @@ Ruby wrapper around the New Relic HTTP API. Makes it very easy to post component
 
 
 Getting Started
-==============
+================
 
-Clone this repo
+Install the Gem
+----------
 
-Install the gem:
+The gem is currently private so you'll need to clone this repo and then install the gem.
 
     gem install ./newrelic_platform-0.0.2.gem
 
-
-
-Then use it:
 
 Create the client
 ------
