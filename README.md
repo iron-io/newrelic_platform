@@ -57,6 +57,8 @@ response = collector.submit
 Boom. Data.
 
 
-### Further Reading
+## Further Reading
 
-You can use IronWorker by Iron.io to schedule this collector so that it runs every minute and pushes data
+You can use IronWorker by Iron.io to schedule this collector so that it runs every minute. See more here:
+https://github.com/newrelic-platform/ironmq_worker
+
