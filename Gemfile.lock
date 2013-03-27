@@ -1,19 +1,24 @@
 PATH
   remote: .
   specs:
-    newrelic_platform (0.0.1)
+    newrelic_platform (0.0.2)
       rest
 
 GEM
   remote: https://rubygems.org/
   specs:
+    ethon (0.5.10)
+      ffi (~> 1.3.0)
+      mime-types (~> 1.18)
+    ffi (1.3.1)
     mime-types (1.21)
-    net-http-persistent (2.8)
-    rest (2.2.0)
-      net-http-persistent
+    rest (2.5.0)
       rest-client (>= 0.3.0)
+      typhoeus (>= 0.5.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    typhoeus (0.6.2)
+      ethon (~> 0.5.10)
     uber_config (1.0.5)
 
 PLATFORMS

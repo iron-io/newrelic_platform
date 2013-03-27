@@ -26,26 +26,26 @@ module NewRelic
       components.each_pair do |k, c|
         p c
         components_array << {
-            :name => c.name,
-            :guid => client.guid,
-            :duration => 60,
-            :metrics => c.metrics
+          :name => c.name,
+          :guid => client.guid,
+          :duration => 60,
+          :metrics => c.metrics
         }
       end
 
       body = {
-          :agent => {
-              :version => client.version,
-              :pid => 1,
-              :host => "whatever"
-          },
-          :components => components_array
+        :agent => {
+          :version => client.version,
+          :pid => 1,
+          :host => "whatever"
+        },
+        :components => components_array
       }
 
       headers = {
-          'Content-Type' => 'application/json',
-          'Accept' => 'application/json',
-          'X-License-Key' => client.license
+        'Content-Type' => 'application/json',
+        'Accept' => 'application/json',
+        'X-License-Key' => client.license
       }
       puts "headers: #{headers.inspect}"
       p body

@@ -1,11 +1,11 @@
 require File.expand_path('../lib/newrelic_platform/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Travis Reeder"]
-  gem.email         = ["treeder@gmail.com"]
-  gem.description   = "Rest client wrapper that chooses best installed client."
-  gem.summary       = "Rest client wrapper that chooses best installed client."
-  gem.homepage      = "https://github.com/iron-io/rest"
+  gem.authors       = ["Travis Reeder", "Chad Arimura"]
+  gem.email         = ["travis@iron.io"]
+  gem.description   = "Ruby wrapper around the New Relic HTTP API. Makes it very easy to post component and metric data to the API."
+  gem.summary       = "Ruby wrapper around the New Relic HTTP API."
+  gem.homepage      = "https://github.com/newrelic-platform/iron_sdk"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
