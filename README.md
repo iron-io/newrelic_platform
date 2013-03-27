@@ -1,22 +1,19 @@
-New Relic HTTP API Ruby Wrapper
-----------------------
+# New Relic HTTP API Ruby Wrapper
 
 Ruby wrapper around the New Relic HTTP API. Makes it very easy to post component and metric data to the API.
 
 
-Getting Started
-================
+## Getting Started
 
-Install the Gem
-----------
+
+### Install the Gem
 
 The gem is currently private so you'll need to clone this repo and then install the gem.
 
     gem install ./newrelic_platform-0.0.2.gem
 
 
-Create the client
-------
+### Create the client
 
 ```
 new_relic = NewRelic::Client.new(:license => YOUR_NEW_RELIC_LICENSE,
@@ -25,16 +22,14 @@ new_relic = NewRelic::Client.new(:license => YOUR_NEW_RELIC_LICENSE,
 ```
 
 
-Create the Collector
------
+### Create the Collector
 
 ```
 collector = new_relic.new_collector
 ```
 
 
-Create the component
-------
+### Create the component
 
 ```
 component = collector.component("COMPONENT_NAME")
@@ -43,8 +38,7 @@ component = collector.component("COMPONENT_NAME")
 
 
 
-Add Metrics
--------- 
+### Add Metrics
 
 ```
 component.add_metric 'Widgets Sold', 'widgets', 1000
@@ -53,11 +47,16 @@ component.add_metric 'Widget Rate', 'widgets/sec', 5
 
 
 
-Post the data to New Relic
----------
+### Post the data to New Relic
+
 ```
 response = collector.submit
 ```
 
 
-That's it.
+Boom. Data.
+
+
+### Further Reading
+
+You can use IronWorker by Iron.io to schedule this collector so that it runs every minute and pushes data
