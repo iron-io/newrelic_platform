@@ -17,8 +17,8 @@ module NewRelic
     end
 
 
-    # req_hash options:
-    # - :body => post body
+    # options:
+    #   :duration => time interval between metrics in seconds. default is 60.
     #
     def submit(options={})
       # build components array
@@ -28,7 +28,7 @@ module NewRelic
         components_array << {
           :name => c.name,
           :guid => client.guid,
-          :duration => 60,
+          :duration => options[:duration] || 60,
           :metrics => c.metrics
         }
       end
