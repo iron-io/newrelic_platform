@@ -11,14 +11,15 @@ module NewRelic
 
     end
 
-    def component(component_name)
-      @components[component_name] ||= Component.new(self, component_name)
+    # options:
+    #   :duration => time interval between metrics in seconds. default is 60.
+    def component(component_name, options={})
+      @components[component_name] ||= Component.new(self, component_name, options)
       @components[component_name]
     end
 
 
-    # req_hash options:
-    # - :body => post body
+    # options:
     #
     def submit(options={})
       # build components array
@@ -28,7 +29,7 @@ module NewRelic
         components_array << {
           :name => c.name,
           :guid => client.guid,
-          :duration => 60,
+          :duration => c.options[:duration] || 60,
           :metrics => c.metrics
         }
       end
@@ -61,12 +62,13 @@ module NewRelic
 
   class Component
 
-    attr_accessor :collector, :name, :metrics
+    attr_accessor :collector, :name, :metrics, :options
 
-    def initialize(collector, name)
+    def initialize(collector, name, options={})
       @collector = collector
       @name = name
       @metrics = {}
+      @options = options
     end
 
     def add_metric(metric_name, units, value)
