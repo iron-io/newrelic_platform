@@ -50,7 +50,7 @@ module NewRelic
       }
       puts "headers: #{headers.inspect}"
       p body
-      response = Rest::Client.new.post('https://platform-api.newrelic.com/platform/v1/metrics',
+      response = Rest::Client.new.post('http://platform-api.newrelic.com/platform/v1/metrics',
                                        :body => body.to_json,
                                        :headers => headers)
       JSON.parse(response.body)
